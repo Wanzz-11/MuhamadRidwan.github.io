@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+    --primaryTextColor: #232e35;
+    --secondaryTextColor: #655D72;
+
+    --borderColor: #F1F1F1;
+    --lineColor: #D9D9DD;
+
+    --primaryBackgroundColor: #fff;
+    --secondBackgroudColor: #fbfbfb;
+    --thirdBackgroundColor: #f5f3fe;
+
+    --primaryIconColor: #7e74f1;
+    --primaryIconColorHover: #5d51e8;
+
+    --sectionPadding: 6rem 0;
+
+    --itemBorderRadius: 0.7rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: var(--primaryTextColor);
+}
+
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+
+p, span, label, input, textarea, li{
+    color: var(--secondaryTextColor);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 1200px){
+    .main-container {
+        width: 90%;
+    }
+}
+
+
+/* Title */
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--secondaryTextColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title ::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: var(--lineColor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+
+/* Logo and Navigation Menu */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+}
+
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem; 
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+
+.logo a {
+    color: var(--primaryTextColor);
+}
+
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+
+nav ul li a {
+    color: var(--primaryTextColor);
+}
+
+
+/* Burger Icon */
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+
+.burger {
+    display: none;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+
+}
+
+
+/* Hero Section */
+
+#hero {
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+
+.hero-name span {
+    color: var(--primaryIconColor);
+}
+
+
+.hero-right img{
+  width: 300px;             /* Ukuran lebar gambar */
+  height: 380px;            /* Tinggi yang sama untuk menjaga proporsi lingkaran */
+  border-radius: 90%;       /* Membuat gambar berbentuk lingkaran */
+  border: 3px solid #fff;   /* Menambahkan border berwarna putih */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Menambahkan efek bayangan */
+  object-fit: cover;        /* Memastikan gambar memenuhi lingkaran dengan proporsi yang benar */
+}
+
+
+/* Education Section*/
+
+#education {
+    padding-bottom: 100px background-color var(--primaryBackgroundColor);
+    height: 550px;
+  }
+  
+  #education h3 {
+    font-size: 2.5rem;
+    margin-bottom: 100px;
+    
+  }
+  
+  #education h5 {
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+  
+  #education p {
+    font-size: 1rem;
+    color: var(--secondaryTextColor);
+  }
+
+
+  /* Pengalaman Kerja Section*/
+
+  #PengalamanKerja {
+    padding: 60px;
+  }
+
+  #PengalamanKerja h3 {
+    font-size: 2.5rem;
+    margin-bottom: 100px;
+    
+  }
+  
+  #PengalamanKerja .card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #PengalamanKerja .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  #PengalamanKerja .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  #PengalamanKerja .card-text {
+    font-size: 1rem;
+    color: var(--secondaryTextColor);
+  }
+
+
+  /* Skills Section */
+
+  #skills {
+    padding: 60px;
+    height: 300px;
+  }
+
+  #skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 100px;
+    
+  }
+  
+  #skills .card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #skills .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  #skills .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  #contact {
+    padding: 200px  100px;
+    height: 300px;
+  }
+  
+  
